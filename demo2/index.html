@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./require.js">
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="buttton" name="" value="购物车商品数量" id="btnCount">
+    <script>
+        //以后会依赖无数个模块
+        require(["cart"], function (cart) {
+            //想要使用cart模块的返回值-->给回调函数添加一个形参
+            document.querySelector('#btnCount').onclick = function () {
+                alert(cart.getCount());
+            }
+        });
+    </script>
+</body>
+
+</html>
