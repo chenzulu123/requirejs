@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 使用requirejs的时候移动要引入requirejs这个文件 -->
+    <script src="./require.js"></script>
+    <title>多模块依赖</title>
+</head>
+
+<body>
+    <input type="button" name="" value="多模块使用">
+</body>
+<script>
+    require(['./mode_b.js'], function (mode_b) {
+        document.querySelector('input').onclick = function () {
+            mode_b();
+        }
+    });
+
+</script>
+
+</html>
