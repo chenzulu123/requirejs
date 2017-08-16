@@ -21,6 +21,9 @@
                 alert(cart.getCount());
             }
         });
+        // 推荐做法：依赖模块路径的时候，把所有有返回值的模块放在前面，把所有无返回值的模块放在后面
+        // -->a、c、d：有返回值 b、e：无返回值
+        // require(['a','c','d','b','e'],function(a,c,d){});
     </script>
 </body>
 
